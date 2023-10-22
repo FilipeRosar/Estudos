@@ -1,0 +1,26 @@
+@charset "UTF-8";
+html{
+    background-color: lightgreen;
+}
+div{
+    margin-bottom: 30px;
+}
+.exemplo{
+    width: 300px;
+    height: 300px;
+    border: 15px dashed lightcoral;
+    padding: 30px;
+    background-image: url('../img/pexels-jahoo-clouseau-1260324-1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+#paddingbox{
+    background-origin: padding-box;
+}
+#borderbox{
+    background-origin: border-box;
+}
+#contentbox{
+    background-origin: content-box;
+}

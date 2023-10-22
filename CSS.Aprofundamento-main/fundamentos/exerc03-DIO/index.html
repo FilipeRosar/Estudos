@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha CSS</title>
+    <style>
+        li{
+            color: aqua;
+        }
+        li li{
+            color: red;
+        }
+        #lista1{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Combinadores: qual tipo de relação entre 2 seletores.
+    1. Combinador descendente (espaço)
+    2. Combinador filho (>)
+    3. Combinador irmão adjacente (+)
+    4. Combinador irmão em geral (-) -->
+    <ul>
+        <li class="fundo-verde" id="lista1">
+            <div>Item 1</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+
+            </ul>
+                
+        </li>
+        <li class="fundo-vermelho" id="lista2">
+            <div>Item 2</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+        <li class="fundo-amarelo" id="lista3">
+            <div>Item 3</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

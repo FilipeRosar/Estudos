@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.exemplo{
+    width: 300px;
+    height: 300px;
+    background-image:url('../img/Nike-Logo.png'), url('../img/GettyImages-1203479933.avif') ;
+    /* background:linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px, 
+    linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+    linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+    background-color:#e1ebbd;
+    background-size: 128px 128px; */
+    /* https://projects.verou.me/css3patterns/ */
+}
+.exemplo2{
+    width: 300px;
+    height: 300px;
+    background-image: url(../img/pexels-jahoo-clouseau-1260324-1.jpg);
+}
+#cover{
+    background-size: cover;
+}
+#contain{
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+#tamanho{
+    background-size: 50%;
+}
+#exemplo-x-y{
+    background-size: 300px 250px;
+}
+#exemplo-camadas{
+    background-size: 200px 100%, cover;
+    background-repeat: no-repeat;
+}
+

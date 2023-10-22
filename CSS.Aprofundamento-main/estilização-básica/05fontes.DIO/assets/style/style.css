@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+@font-face{
+    font-family: Passion;
+    src: url("../fonts/AlumniSansCollegiateOne-Regular.ttf");
+}
+h1{
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: italic;
+    
+}
+p{
+    font-family: Passion;
+    line-height: 25px;
+}

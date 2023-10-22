@@ -1,0 +1,36 @@
+@charset "UTF-8";
+html{
+    background-color: lightgreen;
+}
+div{
+    margin-bottom: 30px;
+}
+.exemplo{
+    width: 300px;
+    height: 300px;
+    border: 15px dashed orangered;
+    padding: 30px;
+    font-size: 40px;
+    font-weight: bolder;
+    background:
+    linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+    linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: #EC173A;
+}
+#paddingbox{
+    background-clip: padding-box;
+}
+#borderbox{
+    background-clip: border-box;
+}
+#contentbox{
+    background-clip: content-box;
+}
+p{
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
