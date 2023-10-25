@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de CSS</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .exemplo{
+            background-color: lightblue;
+        }
+        .inlineBlock{
+            display: inline-block;
+            background-color: bisque;
+            width: 200px;
+            height: 250px;
+            margin: 8px;
+        }
+        .menu{
+            
+            background-color: aqua;
+        }
+        .menu ul li{
+            display: inline-block;
+            padding: 15px 40px;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        .menu ul li:hover{
+            background-color: rgb(6, 102, 102);
+        }
+        .esconder-elemento{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade display</h1>
+    <p>A propriedade display vai determinar como essas caixas retangulares irão se comportar na hora de serem exibidas na tela</p>
+
+    <ul>
+        <li>border-width</li>
+        <li>border-style</li>
+        <li>border-color</li>
+    </ul>
+    <h2>Exemplos: </h2>
+    <code>display: block;</code>
+    <br><br>
+    <div class="exemplo">Exemplo block</div>
+    <div class="exemplo">Exemplo block</div>
+    <br>
+
+    <code>display: inline;</code> <br><br>
+    <span class="exemplo">Exemplo Inline 01</span>
+    <span class="exemplo">Exemplo Inline 02</span>
+    <em class="exemplo">Exemplo Inline 03</em>
+    <b class="exemplo">Exemplo Inline 04</b>
+
+    <br><br>
+    <code>display: inline-block;</code><br><br>
+    <span class="inlineBlock">Exemplo Inline-block 01</span>
+    <em class="inlineBlock">Exemplo Inline-block 02</em>
+    <b class="inlineBlock">Exemplo Inline-block 03</b>
+    <span class="inlineBlock">Exemplo Inline-block 01</span>
+    <em class="inlineBlock">Exemplo Inline-block 02</em>
+    <b class="inlineBlock">Exemplo Inline-block 03</b>
+    <br><br><br>
+    <br>
+    <code>display: none;</code>
+    <br><br>
+    <div class="exemplo esconder-elemento">Exemplo 01</div>
+    <div class="exemplo">
+        <p class="esconder-elemento">Exemplo 01</p>
+        <span>01</span>
+        <span>Teste</span>
+    </div>
+    <h2>Menu de nav</h2>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Meu link 1</a></li>
+            <li><a href="#">Meu link 2</a></li>
+            <li><a href="#">Meu link 3</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
