@@ -1,0 +1,27 @@
+.container{
+    background-color: blueviolet;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 200px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+#container1{
+    flex-flow: row nowrap;
+}
+#container2{
+    flex-flow: column nowrap;
+}
+.item{
+    padding: 8px;
+    background: yellow;
+    
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+.item2{
+    flex-shrink: 2;
+}
