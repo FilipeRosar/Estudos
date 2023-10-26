@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.container{
+    width: 300px;
+    background-color: greenyellow;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+}
+.item{
+    background-color: paleturquoise;
+    margin: 10px;
+}
+#container1{
+    flex-flow: row;
+}
+#container2{
+    flex-direction: column;
+    
+    height: 300px;
+}
