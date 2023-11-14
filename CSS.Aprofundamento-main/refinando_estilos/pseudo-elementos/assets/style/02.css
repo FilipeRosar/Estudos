@@ -1,0 +1,5 @@
+p::before{
+    content: "teste";
+    color: red;
+    background-color: burlywood;
+}
