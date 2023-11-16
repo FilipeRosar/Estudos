@@ -3,14 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pseudo-elementos</title>
+    <title>Pseudo-elementos/ Pseudo-classes</title>
     <link rel="stylesheet" href="/assets/style/02.css">
 </head>
 <body>
-    <p>
+    <p class="before">
         <span>Exemolo 1</span>
         <span>Exemolo 2</span>
         <span>Exemolo 3</span>
     </p>
+    <div class="box_testing">
+        
+    </div>
+    <h2>Pseudo-classes | <code>:active</code> </h2>
+
+    <button class="active_button">Entrar em contato</button>
+    <br><br>
+    <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+
+    <h2>Pseudo-classes | :focus, :focus-within e :focus-visible</h2>
+    <form action="#" method="get">
+        <p>Faça seu pedido! Escolha o sabor do sorvete que você deseja</p>
+        <label for="nome">
+            Nome Completo:
+            <input type="text" name="nome" id="inome">
+        </label>
+        <label for="">
+            Sabor do Sorvete:
+            <select name="sabor" id="isabor">
+                <option value="chocolate">Chocolate</option>
+                <option value="Morango">Morango</option>
+                <option value="Creme">Creme</option>
+                <option value="Flocos">Flocos</option>
+            </select>
+        </label>
+        <button type="submit"  name="botao">Finalizar Pedido</button>
+    </form>
 </body>
 </html>
