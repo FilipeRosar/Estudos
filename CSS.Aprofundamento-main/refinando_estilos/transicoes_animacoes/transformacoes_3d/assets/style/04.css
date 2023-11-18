@@ -22,8 +22,35 @@ body{
     font-weight: bold;
     font-size: 1.4rem;
     transition: background 1s linear, transform 1s ease-in-out;
+    animation-name: exemplo;
+    animation-duration: 4s;
+    animation-iteration-count: 4;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
 }
 .box:hover{
     background-color: rgb(106, 34, 124);
-    transform: rotatex(40deg);
+    transform: rotate(90deg);
+}
+.box::after {
+    content: "";
+}
+@keyframes exemplo {
+    0%{
+        background: palegreen;
+        width: 200px;
+        height: 200px;
+        content: "Teste";
+    }
+    50%{
+        background-color: darkblue;
+        width: 500px;
+        width: 500px;
+        content: "xerecas";
+    }
+    100%{
+        background-color: #d53369;
+        width: 100px;
+        height: 100px;
+    }
 }
