@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(247,247,247);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EF8 100%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.box:hover{
+    /* transform: translate(50px, 50px);  */
+    /* transform: rotateY(50deg); */
+    /* transform: scale(-0.9); */
+    /* transform:skew(50deg) ; */
+    transform: matrix(1, 1, 0, 1,0,0 );
+}
