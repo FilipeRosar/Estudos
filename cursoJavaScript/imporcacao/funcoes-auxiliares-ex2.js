@@ -1,5 +1,5 @@
 
-entradas = [5,3,4,15,10,8];
+entradas = [5,3,4,1,10,8];
 let i = 0;
 
 function gets(){

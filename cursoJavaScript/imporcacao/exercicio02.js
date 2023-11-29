@@ -1,3 +1,4 @@
+
 const { gets, print } = require('./funcoes-auxiliares-ex2.js');
 
 
@@ -23,3 +24,4 @@ for (let i = 0; i < entradas.length; i++) {
 
 print(`Maior número par: ${maiorNumeroPar}`);
 print(`Maior número ímpar: ${menorNumeroImpar}`);
+
