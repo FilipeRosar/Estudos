@@ -13,14 +13,14 @@ function aplicarDescontoEAdicionais(valor, desconto) {
 
 if (salarioBruto >= 0.00 && salarioBruto <= 1100.00) {
 
-    const resultadoDesconto = aplicarDescontoEAdicionais(salarioBruto, 5)
-    print(resultadoDesconto);
+    const saida = aplicarDescontoEAdicionais(salarioBruto, 5)
+    print(saida);
 } else if (salarioBruto >= 1100.01 && salarioBruto <= 2500.00) {
 
-    const resultadoDesconto = aplicarDescontoEAdicionais(salarioBruto, 10)
-    print(resultadoDesconto);
+    const saida = aplicarDescontoEAdicionais(salarioBruto, 10)
+    print(saida);
 } else if (salarioBruto > 2500.00) {
 
-    const resultadoDesconto = aplicarDescontoEAdicionais(salarioBruto, 15);
-    print(resultadoDesconto)
+    const saida = aplicarDescontoEAdicionais(salarioBruto, 15);
+    print(saida)
 }
