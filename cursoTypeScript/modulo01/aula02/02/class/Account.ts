@@ -1,33 +1,45 @@
-export abstract class Account{
+export abstract class Account {
     private name: string;
     private readonly accountNumber: number;
-    balance: number = 0;
+    private balance: number = 0;
     private status: boolean = true;
 
-    constructor(name: string, accountNumber: number){
+    constructor(name: string, accountNumber: number) {
         this.name = name;
         this.accountNumber = accountNumber;
     }
-    setName = (name: string): void => {
+    setName(name: string): void {
         this.name = name;
         console.log(`Nome alterado com sucesso!`)
     }
-    getName = (): string =>{
-        return this.name
+    getName(): string {
+        return this.name;
     }
-    deposit = (): void => {
-        if(this.validateStatus()){
-            console.log('Você depositou')
+    getAccountNumber(): number {
+        return this.accountNumber;
+    }
+    deposit(amount: number): void {
+        if (this.validateStatus()) {
+            this.balance += amount;
+            console.log(`Você depositou ${amount}. Seu saldo atual é de ${this.balance}`)
         }
     }
-    withdraw = (): void => {
-        console.log('Você sacou');
+    withdraw(amount: number): void {
+        if (this.validateStatus() && this.balance >= amount) {
+            this.balance -= amount;
+            console.log(`Você sacou ${amount}. Seu saldo atual é de ${this.balance}`);
+        } else {
+            console.log(`Saldo insuficiente para saque`);
+        }
     }
-    getBalance = (): void => {
-        console.log(this.balance);
+    getBalance(): number {
+        return this.balance;
     }
-    private validateStatus = (): boolean => {
-        if (this.status){
+    setBalance(amount: number): void {
+        this.balance = amount;
+    }
+    validateStatus(): boolean {
+        if (this.status) {
             return this.status
         }
         throw new Error(`Conta inválida`)
