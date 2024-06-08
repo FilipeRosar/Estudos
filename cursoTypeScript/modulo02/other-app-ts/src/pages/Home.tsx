@@ -14,11 +14,11 @@ const Home = () => {
     const navigate = useNavigate();
 
 
-    const handleClick = async (email: string) => {
-        const loggedIn = await verification(email)
+    const handleClick = async (email: string, password: string) => {
+        const loggedIn = await verification(email, password)
 
         if (!loggedIn) {
-            alert('Email inválido')
+            alert('Email ou senha inválido')
             return;
         }
         setIsLoggedIn(true);
@@ -58,7 +58,7 @@ const Home = () => {
                 />
                 <Center>
                     <DButton
-                        onClick={() => handleClick(user)}
+                        onClick={() => handleClick(user, password)}
                     />
                 </Center>
             </CompCard>

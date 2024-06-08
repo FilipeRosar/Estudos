@@ -1,38 +1,61 @@
 import { useNavigate } from "react-router-dom"
 import { verification } from "./login"
 
-// const mockSetIsLoggedIn = jest.fn()
-// const mockNavigate = jest.fn()
+// Mocking the API module
+jest.mock("../api", () => ({
+    api: jest.fn(),
+}));
 
-// jest.mock('react', () => ({
-//     ...jest.requireActual('react'),
-//     useContext: () => ({
-//         setIsLoggedIn: mockSetIsLoggedIn,
-//     })
-// }))
+const mockSetIsLoggedIn = jest.fn();
+const mockNavigate = jest.fn();
 
-// jest.mock('react-router-dom', () => ({
-//     ...jest.requireActual('jest-router-dom') as any,
-//     useNavigate: () => mockNavigate,
-// }))
+jest.mock('react', () => ({
+    ...jest.requireActual('react'),
+    useContext: () => ({
+        setIsLoggedIn: mockSetIsLoggedIn,
+    })
+}));
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom') as any,
+    useNavigate: () => mockNavigate,
+}));
+
 describe('Login', () => {
-
-    // const mockAlert = jest.fn();
-    // window.alert = mockAlert;
-
     const mockEmail = 'filiperosa0312@gmail.com';
-    it('Deve exibir um alert com boas vindas caso o email for válido ', async () => {
-        // await verification(mockEmail)
-        // expect(mockSetIsLoggedIn).toHaveBeenCalledWith(true);
-        const response = await verification(mockEmail)
-        // expect(mockNavigate).toHaveBeenCalledWith('/4')
-        expect(response).toBeTruthy()
-    })
-    it('Deve exibir um erro caso o email seja inválido', async () => {
-        // await verification('email@invalido.com')
-        const response = await verification('email@invalido.com');
-        expect(response).toBeFalsy()
-        // expect(mockSetIsLoggedIn).not.toHaveBeenCalled()
-        // expect(mockNavigate).toHaveBeenCalledWith()
-    })
-})
+    const mockPassword = 'validpassword';
+    
+    // Mock the alert function
+    const mockAlert = jest.fn();
+    global.alert = mockAlert;
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
+
+    it('should display a welcome alert if the email is valid', async () => {
+        const mockApiResponse = { email: mockEmail, password: mockPassword };
+        const { api } = require("../api");
+        api.mockResolvedValue(mockApiResponse);
+
+        const response = await verification(mockEmail, mockPassword);
+        
+        expect(response).toBeTruthy();
+        expect(mockSetIsLoggedIn).toHaveBeenCalledWith(true);
+        expect(mockNavigate).toHaveBeenCalledWith('/4');
+        expect(mockAlert).toHaveBeenCalledWith('Welcome!');
+    });
+
+    it('should display an error if the email is invalid', async () => {
+        const mockApiResponse = { email: mockEmail, password: mockPassword };
+        const { api } = require("../api");
+        api.mockResolvedValue(mockApiResponse);
+
+        const response = await verification('invalidemail@test.com', 'invalidpassword');
+        
+        expect(response).toBeFalsy();
+        expect(mockSetIsLoggedIn).not.toHaveBeenCalled();
+        expect(mockNavigate).not.toHaveBeenCalled();
+        expect(mockAlert).toHaveBeenCalledWith('Invalid credentials');
+    });
+});
